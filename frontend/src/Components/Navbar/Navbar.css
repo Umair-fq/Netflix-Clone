@@ -1,0 +1,137 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #141414;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.navbar.scrolled {
+    background-color: rgba(20, 20, 20, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+/* Navbar Actions */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Search Bar Adjustments */
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 8px 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #454545;
+    color: white;
+    margin-right: -30px;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+.search-input:focus {
+    background-color: #555;
+}
+
+.search-icon {
+    position: relative;
+    padding: 8px;
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+}
+
+/* Logout Button */
+.logout-button {
+    background-color: #e50914; /* Netflix red */
+    border-color: #e50914;
+    color: white;
+    margin-left: 10px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.logout-button:hover {
+    background-color: #f6121D;
+    border-color: #f6121D;
+}
+
+/* Logo */
+.navbar-brand .logo {
+    height: 50px;
+    transition: height 0.3s;
+}
+
+/* Navbar Links */
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+    color: #e50914;
+}
+
+/* Hover Effects */
+.search-bar:hover .search-input,
+.logout-button:hover {
+    border-color: #e50914;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .navbar-brand .logo {
+        height: 40px;
+    }
+
+    .navbar-links, .navbar-actions {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .search-bar {
+        margin: 0;
+        max-width: none;
+    }
+
+    .search-input, .search-icon {
+        border-radius: 4px;
+    }
+
+    .logout-button {
+        width: auto;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,36 @@
+.liked-programs-wrapper {
+    background-color: #141414;
+    color: #fff;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .liked-content {
+    padding: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .liked-content h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+  
+  .liked-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem; /* Ensure there's space at the bottom of the grid */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .liked-content {
+      padding: 2rem;
+    }
+  
+    .liked-content h1 {
+      font-size: 1.5rem;
+    }
+  }
+  

@@ -1,0 +1,109 @@
+/* Card.css */
+
+
+
+  .card-container {
+    position: relative;
+    width: 400px; /* Increase the width to your desired value */
+    height: 300px; /* Keep the height as per your requirement */
+    border-radius: 0; /* Remove the border-radius to make it rectangular */
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.card-container.hovered img {
+  opacity: 0; /* Hide the image to show the video */
+}
+
+/* .video-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  visibility: hidden; 
+} */
+
+.card-container.hovered img {
+  opacity: 0; /* Hide the image to show the video */
+}
+
+.card-container.hovered .video-preview {
+  visibility: visible; /* Show the video on hover */
+  z-index: 0; /* Bring it above the image layer */
+}
+
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-container.hovered .card-overlay {
+  opacity: 1;
+}
+
+.card-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.control-icon {
+  color: white;
+  font-size: 24px;
+}
+
+.card-description {
+  color: white;
+}
+
+.card-title {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.card-genres {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.genre {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .card-container {
+    width: 150px;
+    height: 225px;
+  }
+}

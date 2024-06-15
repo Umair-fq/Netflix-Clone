@@ -1,0 +1,93 @@
+.login-container {
+    position: relative;
+    height: 100vh;
+    background: url('E:\workspaces\vs code\Mern\practise\Netflix Clone\frontend\src\assets\login-bg.png') no-repeat center center fixed; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* .input-group {
+    position: relative;
+    margin-bottom: 20px;
+} */
+
+.login-form input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+}
+
+/* .show-password {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+} */
+
+.input-group {
+    position: relative; /* This makes the absolute positioning of children relative to this container */
+    margin-bottom: 20px;
+}
+
+.show-password {
+    position: absolute;
+    right: 10px; /* Adjust this value if necessary */
+    top: 50%; /* Middle of the container */
+    transform: translateY(-50%); /* Center the button vertically */
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+.login-form .login-btn{
+    width: 100%;
+    padding: 15px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.login-form .login-btn:hover {
+    background-color: #f40612;
+}
+
+
+
+/* Responsive styling */
+@media (max-width: 480px) {
+    .login-form {
+        padding: 20px;
+        margin: 20px;
+    }
+}

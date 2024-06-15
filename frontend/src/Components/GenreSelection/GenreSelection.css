@@ -1,0 +1,56 @@
+/* GenreSelection.css */
+
+.genre-selection-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Adjust based on your layout */
+    margin: 20px auto;
+    background-color: #fff; /* Changed to white for contrast */
+    border: 1px solid #e50914; /* Netflix red, adjusted for visibility */
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.genre-selection {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #141414; /* Netflix dark background */
+    color: #fff;
+    border: none;
+    outline: none;
+    appearance: none; /* Removes default select styling */
+    cursor: pointer;
+}
+
+/* Style for the selected option */
+.genre-selection option:checked,
+.genre-selection option:selected {
+    background-color: #141414; /* Netflix dark background */
+    color: #000; /* Black text for selected option */
+}
+
+/* Hover styles */
+.genre-selection option:hover {
+    background-color: #e50914; /* Netflix red for hover */
+    color: #e50914;
+}
+
+.genre-selection::-ms-expand {
+    display: none; /* Hide the default arrow in IE */
+}
+
+.genre-selection-wrapper::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #e50914; /* Adjusted to white for better contrast */
+    pointer-events: none; /* Ensures the arrow doesn't interfere with clicks */
+}
+
+@media (max-width: 768px) {
+    .genre-selection {
+        padding: 10px;
+    }
+}

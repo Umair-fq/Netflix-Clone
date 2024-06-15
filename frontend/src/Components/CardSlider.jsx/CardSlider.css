@@ -1,0 +1,30 @@
+/* CardSlider.css */
+.card-slider-section {
+    margin-bottom: 40px; /* Space between each slider section */
+  }
+  
+  .card-slider-title {
+    font-size: 1.5rem; /* 24px */
+    color: #da1a1a; /* Color for the title */
+    margin-bottom: 15px; /* Space between title and cards */
+    padding-left: 10px; /* Padding to align with the cards */
+  }
+  
+  .card-row {
+    display: flex;
+    flex-wrap: nowrap; /* No wrapping to keep a horizontal row */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    gap: 10px;
+    padding-bottom: 10px; /* Space at the bottom of the row */
+  }
+  
+  .card-row::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+  }
+  
+  @media (max-width: 768px) {
+    .card-slider-title {
+      font-size: 1.2rem; /* Slightly smaller font on smaller screens */
+    }
+  }
+  

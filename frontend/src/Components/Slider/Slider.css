@@ -1,0 +1,7 @@
+    /* Slider.css */
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
